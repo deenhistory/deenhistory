@@ -713,28 +713,39 @@ header {
         padding: 20px 14px;
         width: 100%;
     }
-    .menu-trigger {
-        display: block;
-        margin-right: 0;
-    }
+
+    /* --- FLEXBOX HEADER FIX --- */
     header {
         flex-direction: row;
-        flex-wrap: wrap; /* Allows components to gracefully fold without smashing together */
+        flex-wrap: wrap; 
         justify-content: space-between;
         align-items: center;
         margin-bottom: 24px;
         padding-bottom: 14px;
         gap: 16px;
     }
-    .search-container {
-        order: 3; /* Shifts the search bar directly to a clean row below the buttons */
-        width: 100%;
-        max-width: 100%;
-        flex: none;
+
+    .menu-trigger {
+        display: block;
+        order: 1;
+        margin-right: auto;
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-card);
     }
+
     .header-actions {
         order: 2;
     }
+
+    .search-container {
+        order: 3;
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-top: 4px;
+    }
+    /* -------------------------- */
+
     .dashboard-grid {
         grid-template-columns: 1fr;
     }
